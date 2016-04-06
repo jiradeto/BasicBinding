@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <data class="MyBindingClass">
-        <variable name="employee" type="com.example.jiradet.basicbinding.Employee"/>
+    <data class="MyBasicBinding">
+        <variable name="emp" type="com.example.jiradet.basicbinding.Employee"/>
     </data>
 
 <RelativeLayout
@@ -37,7 +37,7 @@
             android:text="name" />
 
         <EditText
-            app:addTextChangedListener="@{employee.nameWatcher}"
+            app:addTextChangedListener="@{emp.nameWatcher}"
             android:id="@+id/txt_fullname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
             android:layout_toRightOf="@+id/lbl_title_name"
             android:ems="6"
             android:inputType="text"
-            android:text="@{employee.name}" />
+            android:text="@{emp.name}" />
 
         <TextView
             android:id="@+id/lbl_title_age"
@@ -68,7 +68,7 @@
             android:ems="3"
             android:inputType="number"
             android:maxLength="3"
-            android:text="@{String.valueOf(employee.age)}"/>
+            android:text="@{String.valueOf(emp.age)}"/>
 
         <Button
             android:id="@+id/btn_add_age1"
